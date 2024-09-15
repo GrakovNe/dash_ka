@@ -6,3 +6,18 @@ applications:
     url: https://plex.homelab.org
     icon: resources/player.webp
     accent_color: "#e5a00d"
+
+styles:
+  background_color: "#f0f2f5"
+  text_color: "#333"
+  header_background: "#ff6f3f"
+  header_text_color: "#fff"
+  tile_background: "#fff"
+  tile_border_color: "#ddd"
+  tile_hover_background: "#f9fafb"
+  shadow_color: "rgba(0, 0, 0, 0.1)"
+  tile_shadow: "0 4px 6px var(--shadow-color)"
+  tile_hover_shadow: "0 8px 12px var(--shadow-color)"
+  border_radius: "12px"
+  transition_duration: "0.3s"
+  font_family: "'Roboto', sans-serif"
