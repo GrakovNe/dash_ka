@@ -1,22 +1,11 @@
-:root {}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--background-color: #181a1b;
-		--text-color: #e4e6eb;
-		--header-background: #ff6f3f;
-		--header-text-color: #fff;
-		--tile-background: #242526;
-		--tile-border-color: #3a3b3c;
-		--tile-hover-background: #3a3b3c;
-		--shadow-color: rgba(0, 0, 0, 0.7);
-	}
-}
-
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+}
+
+html, body {
+	height: 100%;
 }
 
 body {
@@ -100,7 +89,6 @@ a {
 	color: inherit;
 }
 
-
 footer {
 	width: 95%;
 	max-width: 1400px;
@@ -112,10 +100,7 @@ footer {
 	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 	border-radius: 8px;
 	margin: 20px auto;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
+	margin-top: auto;
 }
 
 footer a {
