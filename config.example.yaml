@@ -1,0 +1,8 @@
+header:
+  title: My Homelab
+
+applications:
+  - name: Plex Media Server
+    url: https://plex.homelab.org
+    icon: resources/player.webp
+    accent_color: "#e5a00d"
