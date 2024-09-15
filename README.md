@@ -1,6 +1,8 @@
 
 # DashKa
 
+![image](https://github.com/user-attachments/assets/6680fb09-a076-47a2-a987-9283936b505b)
+
 A simple and customizable dashboard to gather all your home services into one user interface for easy navigation.
 
 ## Features
