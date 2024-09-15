@@ -1,104 +1,129 @@
-:root {
+:root {}
 
-        }
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background-color: #181a1b;
+		--text-color: #e4e6eb;
+		--header-background: #ff6f3f;
+		--header-text-color: #fff;
+		--tile-background: #242526;
+		--tile-border-color: #3a3b3c;
+		--tile-hover-background: #3a3b3c;
+		--shadow-color: rgba(0, 0, 0, 0.7);
+	}
+}
 
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --background-color: #181a1b;
-                --text-color: #e4e6eb;
-                --header-background: #ff6f3f;
-                --header-text-color: #fff;
-                --tile-background: #242526;
-                --tile-border-color: #3a3b3c;
-                --tile-hover-background: #3a3b3c;
-                --shadow-color: rgba(0, 0, 0, 0.7);
-            }
-        }
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+body {
+	font-family: var(--font-family);
+	background-color: var(--background-color);
+	color: var(--text-color);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+}
 
-        body {
-            font-family: var(--font-family);
-            background-color: var(--background-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-        }
+header {
+	width: 95%;
+	max-width: 1400px;
+	padding: 15px 20px;
+	background-color: var(--header-background);
+	color: var(--header-text-color);
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	display: flex;
+	align-items: center;
+	border-radius: 15px;
+	box-shadow: 0 4px 12px var(--shadow-color);
+	margin-top: 20px;
+}
 
-        header {
-            width: 95%;
-            max-width: 1400px;
-            padding: 15px 20px;
-            background-color: var(--header-background);
-            color: var(--header-text-color);
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px var(--shadow-color);
-            margin-top: 20px;
-        }
+.dashboard {
+	width: 95%;
+	max-width: 1400px;
+	margin: 40px auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 20px;
+}
 
-        .dashboard {
-            width: 95%;
-            max-width: 1400px;
-            margin: 40px auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-        }
+.tile {
+	padding: 30px 20px;
+	text-align: center;
+	border-radius: var(--border-radius);
+	transition: transform var(--transition-duration) ease, background-color var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+	background-color: var(--tile-background);
+	border: 1px solid var(--tile-border-color);
+	box-shadow: var(--tile-shadow);
+	cursor: pointer;
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	--accent-color: var(--tile-border-color);
+}
+
+.tile:hover {
+	transform: translateY(-8px);
+	box-shadow: var(--tile-hover-shadow);
+	background-color: var(--tile-hover-background);
+	border-color: var(--accent-color);
+}
+
+.tile h2 {
+	margin: 15px 0 0 0;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.icon {
+	width: 50px;
+	height: auto;
+	margin-bottom: 10px;
+	transition: transform var(--transition-duration) ease;
+}
+
+.tile:hover .icon {
+	transform: scale(1.05);
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
 
 
-        .tile {
-            padding: 30px 20px;
-            text-align: center;
-            border-radius: var(--border-radius);
-            transition: transform var(--transition-duration) ease, background-color var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
-            background-color: var(--tile-background);
-            border: 1px solid var(--tile-border-color);
-            box-shadow: var(--tile-shadow);
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            --accent-color: var(--tile-border-color);
-        }
+footer {
+	width: 95%;
+	max-width: 1400px;
+	background-color: white;
+	text-align: center;
+	padding: 15px;
+	font-size: 14px;
+	color: #424242;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	margin: 20px auto;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
 
-        .tile:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--tile-hover-shadow);
-            background-color: var(--tile-hover-background);
-            border-color: var(--accent-color);
-        }
+footer a {
+	color: var(--text-color);
+	text-decoration: none;
+	font-weight: bold;
+}
 
-        .tile h2 {
-            margin: 15px 0 0 0;
-            font-size: 18px;
-            font-weight: 500;
-        }
-
-        .icon {
-            width: 50px;
-            height: auto;
-            margin-bottom: 10px;
-            transition: transform var(--transition-duration) ease;
-        }
-
-        .tile:hover .icon {
-            transform: scale(1.05);
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+footer a:hover {
+	text-decoration: underline;
+}
